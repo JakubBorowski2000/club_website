@@ -6,10 +6,13 @@ body{
     font-size: 16px;
     background-color: black;
     font-family: "Noto Sans JP", "calibri", sans-serif;
-    background-image: url("images/sigmund-t-da_md1qMc-unsplash\(lowersize\).jpg");
+    /*background-image: url("images/sigmund-t-da_md1qMc-unsplash\(lowersize\).jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover;*/
     margin: 0;
+}
+ul{
+    list-style: none;
 }
 p{
     font-family: "Noto Sans JP", "calibri", sans-serif;
@@ -49,18 +52,41 @@ p { font-size: 1em; }
 
 
 /* /////////////////////// HEADER /////////////////////// */
-nav{
-    background-color: #201c6f;
+header{
+    background-color: black;
+    position: fixed;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 80px;
+    justify-content: center;
+    align-items: center;
+}
+.h1grid{
+    grid-area: 1 / 1 / span 1 / span 1;
+    margin-left: 1rem;
+}
+header h1{
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin: 0;
+}
+.navgrid{
+    grid-area: 1 / 2 / span 1 / span 4;
+}
+header nav{
+    background-color: black;
     display: flex;
     justify-content: center;
+    grid-column: 3, span 4;
 }
 nav ul{
-    list-style: none;
     margin: 0 auto;
     display: inline-flex;
     justify-content: center;
     margin-top: 15px;
     margin-bottom: 15px;
+    padding-left: 0;
 }
 nav ul li{
     margin-left: 20px;
@@ -69,8 +95,24 @@ nav ul li{
 nav ul li a{
     text-decoration: none;
     color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 1.25rem;
+    font-weight: normal;
     font-family: "Noto Sans JP", "calibri", sans-serif;
-    text-transform: uppercase;
+}
+.listgrid{
+    grid-area: 1 / 6 / span 1 / span 1;
+    justify-self: end;
+    margin-right: 2.5rem;
+}
+.listgrid a{
+    text-decoration: none;
+    color: white;
+}
+
+/* /////////////////////// MAIN /////////////////////// */
+main .background{
+    background-color: #616161;
+    width: 80%;
+    height: 1000px;
+    margin: 0 auto;
 }
